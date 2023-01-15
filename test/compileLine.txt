@@ -1,0 +1,2 @@
+Windows: g++ .\txtToBoard.cpp ..\src\Evaluation.cpp ..\src\Direction.cpp ..\src\Tree.cpp ..\src\useful.cpp
+Linux:   g++ ./txtToBoard.cpp ../src/Evaluation.cpp ../src/Direction.cpp ../src/Tree.cpp ../src/useful.cpp

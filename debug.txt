@@ -1,0 +1,86 @@
+Moi : OK
+Ordi: INFO max_memory 83886080
+Ordi: INFO timeout_match 600000
+Ordi: INFO timeout_turn 60000
+Ordi: INFO game_type 0
+Ordi: INFO rule 0
+Ordi: INFO time_left 599897
+Ordi: INFO folder C:\ProgramData
+Ordi: TURN 9,9
+Moi : 8,8
+Ordi: INFO time_left 599863
+Ordi: TURN 8,9
+Moi : 7,9
+Ordi: INFO time_left 599555
+Ordi: TURN 9,7
+Moi : 9,8
+Ordi: INFO time_left 599106
+Ordi: TURN 10,8
+Moi : 6,10
+Ordi: INFO time_left 598427
+Ordi: TURN 8,6
+Moi : 11,9
+Ordi: INFO time_left 597594
+Ordi: TURN 6,7
+Moi : 7,8
+Ordi: INFO time_left 595426
+Ordi: TURN 6,8
+Moi : 7,7
+Ordi: INFO time_left 594409
+Ordi: TURN 7,6
+Moi : 5,11
+Ordi: INFO time_left 592254
+Ordi: TURN 4,12
+Moi : 7,11
+Ordi: INFO time_left 589340
+Ordi: TURN 7,10
+Moi : 8,12
+Ordi: INFO time_left 587292
+Ordi: TURN 9,13
+Moi : 9,11
+Ordi: INFO time_left 582853
+Ordi: TURN 7,13
+Moi : 6,11
+Ordi: INFO time_left 575450
+Ordi: TURN 8,11
+Moi : 3,11
+Ordi: INFO time_left 566311
+Ordi: TURN 4,11
+Moi : 5,9
+Ordi: INFO time_left 558420
+Ordi: TURN 4,8
+Moi : 5,8
+Ordi: INFO time_left 548710
+Ordi: TURN 7,5
+Moi : 6,4
+Ordi: INFO time_left 546962
+Ordi: TURN 5,7
+Moi : 5,12
+Ordi: INFO time_left 511188
+Ordi: TURN 5,10
+Moi : 10,10
+Ordi: INFO time_left 481388
+Ordi: TURN 12,8
+Moi : 6,6
+Ordi: INFO time_left 444108
+Ordi: TURN 4,10
+Moi : 4,9
+Ordi: INFO time_left 337962
+Ordi: TURN 3,10
+Moi : 6,9
+Ordi: INFO time_left 282951
+Ordi: TURN 3,9
+Moi : 5,5
+Ordi: INFO time_left 196897
+Ordi: TURN 4,4
+Moi : 6,12
+Ordi: INFO time_left 6984
+Ordi: TURN 6,13
+Moi : 7,12
+Ordi: INFO time_left -681600
+Ordi: TURN 9,12
+Moi : 3,3
+Ordi: INFO time_left -1384627
+Ordi: TURN 8,13
+Moi : 2,2
+Ordi: END

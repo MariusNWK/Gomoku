@@ -1,0 +1,64 @@
+//FAIT Ne pas griser un alignement si le pion analysé est "encerclé" d'autre pions du mm type
+
+//FAIT return alignment = 1 quand l'alignement est "encerclé"
+
+//FAIT Gérer les scores :
+    alignement de 1 = +1pt //ou + 0 ?
+    alignement de 2 = +(1pt * 2) * 2 (dernier * 2 indispensable pour qu'un alignement de 2 n'est pas juste le score de deux alignements de 1 sinon ça sert à rien)
+    alignement de 3 = +(1pt * 3) * 3
+    alignement de 4 = +(1pt * 4) * 4
+    alignement de 5 = Victoire -> cas particulier à gérer (renvoyer 100% pour l'un et 0 pour l'autre à la fin)
+
+//FAIT Faire un pourcentage grâce à ces scores (3 chiffres après la virgule).
+
+//FAIT Idée : parcourir le board 5 fois : (au moins calculer le nombre d'alignements de 5, 4, 3 etc... pour voir si je trouve
+un plus grand score)
+    - une fois pour chercher les alignements de 5 (return direct victoire si trouvé)
+    - une fois pour chercher les alignements de 4
+    - une fois pour chercher les alignements de 3
+    - une fois pour chercher les alignements de 2
+    - une fois pour chercher les alignements de 1
+
+//FAIT Seules choses à gérer :
+    - alignement de 4, EMPTY de chaque côté de l'alignement -> à un coup de la victoire
+    - (?) alignement de 3, 2 EMPTY d'un côté et 1 EMPTY de l'autre -> à deux coups de la victoire
+
+//FAIT Pour les relevant squares: enlever ceux non EMPTY
+
+//FAIT Optimiser minMax avec alpha beta (voir vidéo)
+
+//FAIT Algo lookForCombinations optimisable mtn qu'on connaît l'alignement qu'on recherche à chaque fois
+
+//A_REESAYER //FAIT //CPASPLUSOPTI Fonction isGameOver optimisable puisqu'en vérité il suffit juste de check si là où le nouveau pion
+a été placé, il y a un alignement de 5 (au lieu de check toutes les cases)
+
+//MIEUX //EN //DESSOUS getRelevantSquares : au lieu de chercher tous les relevantSquares à chaque fois, les stocker,
+et vérifier seulement autour du nouveau pion ajouté quels relevantSquares ajouter
+
+encore meilleure opti : choisir tous les relevantSquares (d'alignement 5,4,3 OU au moins 20 OU tous ceux possibles) qui offrent les plus grands alignements + les squares autour du pion nouvellement joué :
+for (int alignment = 5, nbRelevantSquares = 0; alignement >= 1 && nbRelevantSquares <= 20; alignment += 1) {
+    mettre les deux stones en analyse à la place du relevant Square en analyse et simuler leur alignement
+}
+
+//IDEE faire en sorte qu'un alignement délimité par des cases EMPTY rapportent plus de points que ce même alignement délimité d'au moins un côté par stone adverse ou limite
+(sûrement commencer par les alignements de 3, ceux de 2 peuvent être plus compliqués (à voir))
+//FAIT //POUR //TROIS //ENTOURE //DE //EMPTY
+//FAIT -> Faire pour XOXOOX et XOOXOX (O = mes pions, X = EMPTY)
+
+//FAIT Mettre boardSize en attribut au lieu de le faire passer dans toutes les fonctions
+
+//IDEE //FAIT Attribuer + de pts à:
+if (isOneToOneToVictory(x, y, boardSize, board, alignType, content))
+    return 3 * 4;
+if (_fourAlignmentsNbr > 1)
+    return ONE_TO_VICTORY;
+if (isOneToVictory(x, y, boardSize, board, alignType, content))
+    return ONE_TO_VICTORY;
+quand enum Content content == stoneToBePlayed
+
+//A //REFLECHIR check les 5 alignements possibles dans la boucle de getFromBoard très longs -> voir si il y a possibilité de faire autrement
+
+Chercher c'est quoi les meilleurs coups du début de partie et les ajouter en dur
+
+//UTILE? Jouer les coups pour gagner ou pour bloquer l'adversaire instantanément (normalement l algo le fait
+tout seul et assez rapidement (grâce à la selection des relevant squares) donc pas sûr que ce soit utile)

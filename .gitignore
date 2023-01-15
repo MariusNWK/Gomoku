@@ -1,0 +1,7 @@
+.vscode/
+debug
+path.hpp
+src/*.o
+pbrain-gomoku-ai
+*.exe
+*.out
